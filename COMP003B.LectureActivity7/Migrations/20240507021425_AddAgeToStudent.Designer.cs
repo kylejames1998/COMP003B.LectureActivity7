@@ -3,6 +3,7 @@ using COMP003B.LectureActivity7.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace COMP003B.LectureActivity7.Migrations
 {
     [DbContext(typeof(ProgrammingAcademyContext))]
-    partial class ProgrammingAcademyContextModelSnapshot : ModelSnapshot
+    [Migration("20240507021425_AddAgeToStudent")]
+    partial class AddAgeToStudent
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
